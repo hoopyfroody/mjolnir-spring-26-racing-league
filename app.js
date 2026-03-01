@@ -116,7 +116,7 @@ function render(standings, races) {
           ? ` <span class="race-crash" title="Crashed">💀</span>`
           : "";
         const prizeTag = res.prize
-          ? `<span class="race-prize" title="$1,000,000 prize winner">$1M</span>`
+          ? `<span class="race-prize" title="$1,000,000 prize winner">🏆 $1M</span>`
           : "";
         const carTag = res.car
           ? `<span class="race-car" title="Car won: ${escapeHTML(res.car)}">🏆 ${escapeHTML(res.car)}</span>`
