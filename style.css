@@ -8,24 +8,28 @@
 }
 
 :root {
-  --bg:         #0a0a0a;
-  --surface:    #141414;
-  --surface-2:  #1e1e1e;
-  --border:     #2a2a2a;
-  --text:       #e8e8e8;
-  --text-dim:   #888;
-  --red:        #d4202c;
-  --red-glow:   rgba(212, 32, 44, .25);
-  --gold:       #ffd700;
-  --silver:     #c0c0c0;
-  --bronze:     #cd7f32;
-  --gold-bg:    rgba(255, 215, 0, .08);
-  --silver-bg:  rgba(192, 192, 192, .06);
-  --bronze-bg:  rgba(205, 127, 50, .06);
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --surface-2: #1e1e1e;
+  --border: #2a2a2a;
+  --text: #e8e8e8;
+  --text-dim: #888;
+  --red: #d4202c;
+  --red-glow: rgba(212, 32, 44, 0.25);
+  --gold: #ffd700;
+  --silver: #c0c0c0;
+  --bronze: #cd7f32;
+  --gold-bg: rgba(255, 215, 0, 0.08);
+  --silver-bg: rgba(192, 192, 192, 0.06);
+  --bronze-bg: rgba(205, 127, 50, 0.06);
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -47,7 +51,7 @@ header {
 h1 {
   font-size: 2.6rem;
   font-weight: 800;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -56,22 +60,22 @@ h1 .accent {
 }
 
 .subtitle {
-  margin-top: .4rem;
+  margin-top: 0.4rem;
   color: var(--text-dim);
-  font-size: .95rem;
-  letter-spacing: .25em;
+  font-size: 0.95rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
 /* ── Error ───────────────────────────────────────────── */
 .error {
-  background: rgba(212, 32, 44, .12);
+  background: rgba(212, 32, 44, 0.12);
   border: 1px solid var(--red);
   color: #ff6b6b;
   padding: 1rem 1.25rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 /* ── Scoreboard Table ────────────────────────────────── */
@@ -85,7 +89,7 @@ h1 .accent {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: .9rem;
+  font-size: 0.9rem;
   white-space: nowrap;
 }
 
@@ -94,10 +98,10 @@ thead th {
   background: var(--surface-2);
   color: var(--text-dim);
   font-weight: 700;
-  font-size: .75rem;
-  letter-spacing: .1em;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: .85rem 1rem;
+  padding: 0.85rem 1rem;
   border-bottom: 2px solid var(--red);
   text-align: center;
 }
@@ -109,7 +113,7 @@ thead th:nth-child(2) {
 
 /* Body */
 tbody td {
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   border-bottom: 1px solid var(--border);
   text-align: center;
   vertical-align: middle;
@@ -131,7 +135,7 @@ tbody tr:last-child td {
 }
 
 tbody tr:hover {
-  background: rgba(255, 255, 255, .03);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 /* Race result cell */
@@ -145,17 +149,31 @@ tbody tr:hover {
 
 .race-pos {
   font-weight: 700;
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 .race-pts {
-  font-size: .7rem;
+  font-size: 0.7rem;
   color: var(--text-dim);
 }
 
 .race-pts.has-points {
   color: var(--red);
   font-weight: 600;
+}
+
+.race-crash {
+  font-size: 1em;
+  opacity: 0.5;
+  vertical-align: middle;
+}
+
+.race-prize {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  opacity: 0.7;
 }
 
 /* Total column */
@@ -214,8 +232,17 @@ tbody tr:hover {
 
 /* ── Responsive ──────────────────────────────────────── */
 @media (max-width: 640px) {
-  h1 { font-size: 1.6rem; }
-  .container { padding: 1.2rem .8rem 3rem; }
-  table { font-size: .78rem; }
-  thead th, tbody td { padding: .55rem .5rem; }
+  h1 {
+    font-size: 1.6rem;
+  }
+  .container {
+    padding: 1.2rem 0.8rem 3rem;
+  }
+  table {
+    font-size: 0.78rem;
+  }
+  thead th,
+  tbody td {
+    padding: 0.55rem 0.5rem;
+  }
 }
