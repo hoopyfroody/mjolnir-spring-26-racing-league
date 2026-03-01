@@ -1,0 +1,221 @@
+/* ── Reset & Base ────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:         #0a0a0a;
+  --surface:    #141414;
+  --surface-2:  #1e1e1e;
+  --border:     #2a2a2a;
+  --text:       #e8e8e8;
+  --text-dim:   #888;
+  --red:        #d4202c;
+  --red-glow:   rgba(212, 32, 44, .25);
+  --gold:       #ffd700;
+  --silver:     #c0c0c0;
+  --bronze:     #cd7f32;
+  --gold-bg:    rgba(255, 215, 0, .08);
+  --silver-bg:  rgba(192, 192, 192, .06);
+  --bronze-bg:  rgba(205, 127, 50, .06);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ── Container ───────────────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Header ──────────────────────────────────────────── */
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+h1 .accent {
+  color: var(--red);
+}
+
+.subtitle {
+  margin-top: .4rem;
+  color: var(--text-dim);
+  font-size: .95rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+
+/* ── Error ───────────────────────────────────────────── */
+.error {
+  background: rgba(212, 32, 44, .12);
+  border: 1px solid var(--red);
+  color: #ff6b6b;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: .9rem;
+}
+
+/* ── Scoreboard Table ────────────────────────────────── */
+.scoreboard-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+  white-space: nowrap;
+}
+
+/* Head */
+thead th {
+  background: var(--surface-2);
+  color: var(--text-dim);
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .85rem 1rem;
+  border-bottom: 2px solid var(--red);
+  text-align: center;
+}
+
+thead th:first-child,
+thead th:nth-child(2) {
+  text-align: left;
+}
+
+/* Body */
+tbody td {
+  padding: .7rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  vertical-align: middle;
+}
+
+tbody td:first-child {
+  text-align: left;
+  font-weight: 700;
+  width: 3rem;
+}
+
+tbody td:nth-child(2) {
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, .03);
+}
+
+/* Race result cell */
+.race-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 50px;
+}
+
+.race-pos {
+  font-weight: 700;
+  font-size: .85rem;
+}
+
+.race-pts {
+  font-size: .7rem;
+  color: var(--text-dim);
+}
+
+.race-pts.has-points {
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* Total column */
+.total-cell {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--red);
+}
+
+/* ── Medal rows ──────────────────────────────────────── */
+.row-gold {
+  background: var(--gold-bg) !important;
+}
+
+.row-gold td:first-child {
+  border-left: 4px solid var(--gold);
+}
+
+.row-gold .rank-badge {
+  color: var(--gold);
+}
+
+.row-silver {
+  background: var(--silver-bg) !important;
+}
+
+.row-silver td:first-child {
+  border-left: 4px solid var(--silver);
+}
+
+.row-silver .rank-badge {
+  color: var(--silver);
+}
+
+.row-bronze {
+  background: var(--bronze-bg) !important;
+}
+
+.row-bronze td:first-child {
+  border-left: 4px solid var(--bronze);
+}
+
+.row-bronze .rank-badge {
+  color: var(--bronze);
+}
+
+/* Rank badge */
+.rank-badge {
+  font-size: 1rem;
+}
+
+/* ── Utility ─────────────────────────────────────────── */
+.hidden {
+  display: none !important;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 640px) {
+  h1 { font-size: 1.6rem; }
+  .container { padding: 1.2rem .8rem 3rem; }
+  table { font-size: .78rem; }
+  thead th, tbody td { padding: .55rem .5rem; }
+}

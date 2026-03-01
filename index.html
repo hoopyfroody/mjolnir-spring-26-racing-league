@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mjolnir Scoreboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>MJOLNIR SPRING '26 <span class="accent">RACING LEAGUE</span></h1>
+        <p class="subtitle">Championship Standings</p>
+      </header>
+
+      <div id="scoreboardWrapper" class="scoreboard-wrapper hidden">
+        <table id="scoreboard">
+          <thead id="scoreboardHead"></thead>
+          <tbody id="scoreboardBody"></tbody>
+        </table>
+      </div>
+
+      <div id="errorMsg" class="error hidden"></div>
+    </div>
+
+    <script src="results.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
