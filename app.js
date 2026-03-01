@@ -30,11 +30,12 @@ function parseCSV(text) {
     const position = parseInt(cols[2], 10);
     const prize = cols.length >= 4 ? parseInt(cols[3], 10) === 1 : false;
     const crashed = cols.length >= 5 ? parseInt(cols[4], 10) === 1 : false;
+    const car = cols.length >= 6 ? cols[5].slice(0, 6) : "";
 
     if (isNaN(race) || isNaN(position) || !name) continue;
 
     raceSet.add(race);
-    results.push({ race, name, position, prize, crashed });
+    results.push({ race, name, position, prize, crashed, car });
   }
 
   if (results.length === 0) {
@@ -50,12 +51,18 @@ function parseCSV(text) {
 function buildStandings(results, races) {
   const drivers = {};
 
-  for (const { race, name, position, prize, crashed } of results) {
+  for (const { race, name, position, prize, crashed, car } of results) {
     if (!drivers[name]) {
       drivers[name] = { name, raceResults: {}, total: 0 };
     }
     const pts = getPoints(position);
-    drivers[name].raceResults[race] = { position, points: pts, prize, crashed };
+    drivers[name].raceResults[race] = {
+      position,
+      points: pts,
+      prize,
+      crashed,
+      car,
+    };
     drivers[name].total += pts;
   }
 
@@ -111,11 +118,14 @@ function render(standings, races) {
         const prizeTag = res.prize
           ? `<span class="race-prize" title="$1,000,000 prize winner">$1M</span>`
           : "";
+        const carTag = res.car
+          ? `<span class="race-car" title="Car won: ${escapeHTML(res.car)}">🏆 ${escapeHTML(res.car)}</span>`
+          : "";
         bodyHTML += `<td>
           <div class="race-cell">
             <span class="race-pos">P${res.position}${crashSkull}</span>
             <span class="race-pts ${ptClass}">${res.points > 0 ? "+" + res.points : "—"}</span>
-            ${prizeTag}
+            ${prizeTag}${carTag}
           </div>
         </td>`;
       } else {

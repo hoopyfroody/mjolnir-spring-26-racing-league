@@ -176,6 +176,19 @@ tbody tr:hover {
   opacity: 0.7;
 }
 
+.race-car {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #bdbdbd;
+  background: #07517b;
+  border-radius: 3px;
+  padding: 1px 4px;
+  line-height: 1.4;
+}
+
 /* Total column */
 .total-cell {
   font-size: 1.1rem;
