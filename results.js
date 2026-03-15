@@ -33,4 +33,14 @@ const RESULTS_CSV = `race number,name,finishing position,prize,crashed,car
 2,MulletMaestro,15,0,0,
 2,Cau7ion,16,0,0,
 2,Jmoodz,17,0,0,
+3,Brandubh,1,0,0,SLR
+3,Ukulele1,2,1,0,
+3,Mortify,3,0,0,
+3,Frood,4,1,0,
+3,Znurx,5,0,0,
+3,Skaan,6,0,0,
+3,rxlyaT,7,0,0,
+3,VexRemington,8,0,0,
+3,Alarka,9,0,0,
+3,ItzMiller,10,0,0,
 `;
