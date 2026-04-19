@@ -121,4 +121,27 @@ const RESULTS_CSV = `race number,name,finishing position,prize,crashed,car
 7,MulletMaestro,20,0,0,
 7,Brandubh,21,0,0,
 7,SimplyKickinIt,22,0,0,
+8,Ukulele1,1,0,0,2 Cars
+8,VexRemington,2,0,0,
+8,Frood,3,0,0,
+8,PrecisionOne,4,0,0,
+8,Mortify,5,0,0,GARAGE
+8,Niuf,6,0,0,SLR
+8,rxlyaT,7,0,0,
+8,ItzMiller,8,0,0,
+8,waltersw,9,0,0,
+8,OPwan,10,0,0,
+8,Boloyo,11,0,0,
+8,Gunnolf316,12,0,0,
+8,Pottsy92,13,0,0,
+8,Alarka,14,0,0,
+8,Pyrol,15,0,0,
+8,Regie,16,0,0,
+8,thereisacow,17,1,0,
+8,Jmoodz,18,0,0,
+8,SimplyKickinIt,19,0,0,
+8,MulletMaestro,20,0,0,
+8,Skaan,21,0,0,
+8,Znurx,22,0,0,
+8,DaBsTeRz,23,1,0,
 `;
